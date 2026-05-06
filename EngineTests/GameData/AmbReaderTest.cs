@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using ConvertCiv3Media;
+using EngineTests.Utils;
 using QueryCiv3;
 using Xunit;
 
@@ -9,8 +10,7 @@ namespace EngineTests.GameData;
 public class AmbReaderTest {
 	[Fact]
 	public void WorkerRunAmbTest() {
-		string is_on_github = System.Environment.GetEnvironmentVariable("CI");
-		if (is_on_github != null) {
+		if (Civ3TestData.ShouldSkipCiv3DependentTests()) {
 			return;
 		}
 

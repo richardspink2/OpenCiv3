@@ -803,6 +803,20 @@ namespace C7GameData {
 			}
 		}
 
+		public static TileDirection rotatedClockwise90Degrees(this TileDirection dir) {
+			switch (dir) {
+				case TileDirection.NORTH: return TileDirection.EAST;
+				case TileDirection.NORTHEAST: return TileDirection.SOUTHEAST;
+				case TileDirection.EAST: return TileDirection.SOUTH;
+				case TileDirection.SOUTHEAST: return TileDirection.SOUTHWEST;
+				case TileDirection.SOUTH: return TileDirection.WEST;
+				case TileDirection.SOUTHWEST: return TileDirection.NORTHWEST;
+				case TileDirection.WEST: return TileDirection.NORTH;
+				case TileDirection.NORTHWEST: return TileDirection.NORTHEAST;
+				default: throw new ArgumentOutOfRangeException("Invalid TileDirection");
+			}
+		}
+
 		public static (int, int) toCoordDiff(this TileDirection dir) {
 			switch (dir) {
 				case TileDirection.NORTH: return (0, -2);
