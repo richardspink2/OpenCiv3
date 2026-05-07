@@ -10,9 +10,7 @@ namespace EngineTests.GameData;
 public class AmbReaderTest {
 	[Fact]
 	public void WorkerRunAmbTest() {
-		if (Civ3TestData.ShouldSkipCiv3DependentTests()) {
-			return;
-		}
+		if (Civ3TestData.ShouldSkipCiv3DependentTests()) { return; }
 
 		string path = Path.Combine(Civ3Location.GetCiv3Path(), "Art", "Units", "Worker", "WorkerRun.amb");
 
