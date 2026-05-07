@@ -314,7 +314,7 @@ namespace C7GameData {
 		}
 
 		internal TileDirection GetAttackAnimationDirection(TileDirection attackDirection) {
-			return unitType.rotateBeforeAttack ? attackDirection.rotatedClockwise90Degrees() : attackDirection;
+			return unitType.rotateBeforeAttack ? attackDirection.rotatedCounterClockwise90Degrees() : attackDirection;
 		}
 
 		internal TileDirection GetDefenseAnimationDirection(TileDirection attackDirection) {
